@@ -8,7 +8,7 @@ Note: the span of publish dates is much wider for short ideas.
 
 In order to circumstance the anti-scraping measures deployed by that website, I tried using TOR. But the attempt failed. I suspect that TOR proxies are well-known and they are blocked by the website. (A human user could solve the captcha to continue using the website but our spiders certainly cannot do that.) 
 
-In the end, I used a pool of user agents and proxies and draw randomly from the pools for each request. And this approach worked.
+In the end, I used a pool of user agents and proxies and draw randomly from the pools for each request. And this approach worked. *See middlewares.py and settings.py for the details.*
 
 
 *The code for scrapy spiders can be found in stock_ideas folder.*
