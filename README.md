@@ -15,7 +15,7 @@ In the end, I used a pool of user agents and proxies and draw randomly from the 
 
 *long.csv and short.csv are the data scraped.*
 
-*daily_adjusted_*.csv are csv files for historical daily adjusted prices obtained from* [here](https://www.alphavantage.co/)
+*daily_adjusted_\*.csv are csv files for historical daily adjusted prices obtained from* [here](https://www.alphavantage.co/)
 
 Note: for only 4 stocks, I just used the web based API call.
 
