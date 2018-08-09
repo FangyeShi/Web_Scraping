@@ -24,3 +24,5 @@ Note: for only 4 stocks, I just used the web based API call.
 Note: for this website, it will get redirected to captcha page very soon and so this is *not* working.
 
 *The python notebook includes data cleaning and data analysis. See presentation.pdf for more accessible/readable analysis.* 
+
+*classifier_based_on_word_embedding.py is the script to train a sentiment classifier based on our dataset. It uses pre-trained word embedding model provided in tf-hub and it also utilizes high level apis in tensorflow.* 
