@@ -84,6 +84,7 @@ def train_and_evaluate_with_module(hub_module, train_module=False):
 
     # Train a NN classifier after embedding.
     # There are parameters that could be tuned later.
+    # Roughly 114k parameters in NN
     estimator = tf.estimator.DNNClassifier(hidden_units=[500, 100],feature_columns=[embedded_text_feature_column],n_classes=2,optimizer=tf.train.AdagradOptimizer(learning_rate=0.003))
 
     # Train 1000 steps. Note the default batch size is 128. With a training set of size ~ 15000, this is roughly 8.5 epochs.
@@ -124,6 +125,7 @@ def train_and_evaluate_with_module(hub_module, train_module=False):
     plt.xlabel("Predicted")
     plt.ylabel("True")
 
+    # Get module name to be used in the name of .png file.
     module_name = hub_module.replace('//','/')
     module_name = module_name.split('/')[-2]
     if train_module:
@@ -140,5 +142,7 @@ results["nnlm-en-dim128"] = train_and_evaluate_with_module("https://tfhub.dev/go
 results["nnlm-en-dim128-with-module-training"] = train_and_evaluate_with_module("https://tfhub.dev/google/nnlm-en-dim128/1", True)
 results["random-nnlm-en-dim128"] = train_and_evaluate_with_module("https://tfhub.dev/google/random-nnlm-en-dim128/1")
 results["random-nnlm-en-dim128-with-module-training"] = train_and_evaluate_with_module("https://tfhub.dev/google/random-nnlm-en-dim128/1", True)
+
+# Total train time is roughly 3 minutes for all 4 models using gpu GTX 1060.
 
 pd.DataFrame.from_dict(results, orient="index").to_csv('model_accuracies.csv')
