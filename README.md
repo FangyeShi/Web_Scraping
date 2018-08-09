@@ -2,7 +2,7 @@
 
 *In this project, I scraped the data from SeekxxxAlpxx using python package scrapy.*
 
-*Specifically, I scraped author, publish date, target stock(s), title and summary of roughly 7k articles on long ideas and 10k articles on short ideas*
+*Specifically, I scraped author, publish date, target stock(s), title and summary of roughly 8.5k articles on long ideas and 10k articles on short ideas*
 
 Note: the span of publish dates is much wider for short ideas.
 
